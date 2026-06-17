@@ -1,0 +1,10 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Testing ansible controller latest with oath token
+      ansible.controller.project:
+        name: "Test Project (Delete)"
+        description: "Test Project (Delete)"
+        organization: "Platform - POC"
+        state: present
+        request_timeout: 10
