@@ -7,4 +7,3 @@
         description: "Test Project (Delete)"
         organization: "Platform - POC"
         state: present
-        request_timeout: 10
