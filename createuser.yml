@@ -1,6 +1,13 @@
 ---
-- hosts: all
+- name: Pause execution for 40 seconds
+  hosts: all
+  gather_facts: false
+
   tasks:
-     - user:
-            name: rohan
-            state: present
+    - name: Wait for 40 seconds
+      ansible.builtin.pause:
+        seconds: 40
+
+    - name: Display a message after the pause
+      ansible.builtin.debug:
+        msg: "40 seconds have elapsed."
